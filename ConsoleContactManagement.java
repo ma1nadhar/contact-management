@@ -256,6 +256,7 @@ public class ConsoleContactManagement {
 	// initial display of menu page
 	void ShowMenu() {
 
+		// menu options
 		System.out.println("MENU PAGE\nLET'S GET STARTED!");
 		System.out.println();
 		System.out.println("1--------->ADD CONTACT");
@@ -268,31 +269,38 @@ public class ConsoleContactManagement {
 		System.out.print("Option: ");
 		Scanner sc = new Scanner(System.in);
 		int option = sc.nextInt();
-
-		if (option == 1) {
-
-			AddContacts();
-
-		} else if (option == 2) {
-
-			ShowContacts();
-
-		} else if (option == 3) {
-
-			DeleteContact();
-
-		} else if (option == 4) {
-
-			GetContact();
-
-		} else if (option == 5) {
-
-			ModifyContact();
-
-		} else if (option == 6) {
-
-			System.out.println("\nbye bye...");
-
+		
+		// switch statment
+		switch (option) {
+				
+			case 1:
+				AddContacts();
+				break;
+				
+			case 2:
+				ShowContacts();				
+				break;
+				
+			case 3:
+				DeleteContact();
+				break;
+				
+			case 4:
+				GetContact();
+				break;
+				
+			case 5:
+				ModifyContact();
+				break;
+				
+			case 6:
+				System.out.println("\nbye bye...");
+				break;
+				
+			default:
+				System.out.println("Not a Valid Option!");
+				break;
+		
 		}
 
 	}
