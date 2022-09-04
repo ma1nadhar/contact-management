@@ -1,9 +1,21 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+/* 
+ * ConsoleContactManagement.java
+ * 
+ * Maina Dhar
+ * Java Project
+ * 
+ * This java project incorporates and deletes contact details. The system 
+ * will let customers add contacts, with names and email addresses. The end 
+ * result of this project will be an application similar to a phonebook application. 
+ * This project will acquaint with major data handling and data structuring.
+ * 
+ */
+
+import java.util.*;
 
 public class ConsoleContactManagement {
 
+	// ArrayList of type ContactProperty
 	List<ContactProperty> cparry = new ArrayList<>();
 	
 	// Adds as many contacts as user wants
@@ -136,6 +148,7 @@ public class ConsoleContactManagement {
 
 	}
 
+	// deletes contact given name
 	void DeleteContact() {
 
 		// ask user for contact name
@@ -163,6 +176,7 @@ public class ConsoleContactManagement {
 
 	}
 
+	// modifys contact given name
 	void ModifyContact() {
 
 		// ask user for name
@@ -239,6 +253,7 @@ public class ConsoleContactManagement {
 
 	}
 
+	// initial display of menu page
 	void ShowMenu() {
 
 		System.out.println("MENU PAGE\nLET'S GET STARTED!");
@@ -282,14 +297,14 @@ public class ConsoleContactManagement {
 
 	}
 
-//	public static void main(String[] args) {
-//
-//		ContactManagement cm = new ContactManagement();
-//		
-//		
-//
-//		cm.ShowMenu();
-//
-//	}
+	public static void main(String[] args) {
+
+		// create object
+		ContactManagement cm = new ContactManagement();
+		
+		// display initial menu page
+		cm.ShowMenu();
+
+	}
 
 }
